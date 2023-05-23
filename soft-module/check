@@ -1,0 +1,8 @@
+1. Whether entity e occurs in the passage.
+2. Whether entity e occurs in the question.
+3. The frequency of entity e in the passage.
+4. The first position of occurence of entity e in the passage.
+5. n-gram exact match: whether there is an exact match between the text surrounding the placeholder and the text surrounding entity e. We have features for all combinations of matching left and/or right one or two words.
+6. Word distance: we align the placeholder with each occurrence of entity e, and compute the average minimum distance of each non-stop question word from the entity in the passage.
+7. Sentence co-occurrence: whether entity e cooccurs with another entity or verb that appears in the question, in some sentence of the passage.
+8. Dependency parse match: we dependency parse both the question and all the sentences in the passage, and extract an indicator feature of whether w r−→ @placeholder and w r−→ e are both found; similar features are constructed for @placeholder r−→ w and e r−→ w.
